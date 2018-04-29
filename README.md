@@ -8,3 +8,14 @@
 To run Musom on a local machine, you need to have the following dependencies installed:
 * Ruby 2.5
 * MySQL5.7
+
+## Running the app
+
+```
+$ git clone git@github.com:ogontaro/musom.git
+$ cd musom
+$ bundle
+$ bundle exec rails db:setup
+$ docker-compose up -d
+$ bundle exec rails start 
+``` 
