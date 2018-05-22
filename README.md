@@ -7,7 +7,7 @@
 
 To run Musom on a local machine, you need to have the following dependencies installed:
 * Ruby 2.5
-* MySQL5.7
+* PostgreSQL 10.3
 
 ## Running the app
 
