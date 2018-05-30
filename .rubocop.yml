@@ -60,20 +60,11 @@ Metrics/MethodLength:
 Style/AsciiComments:
   Enabled: false
 
-Style/ClassAndModuleChildren:
-  Enabled: false
-
 Style/Documentation:
   Enabled: false
 
 Style/EmptyMethod:
   EnforcedStyle: expanded
-
-Style/FrozenStringLiteralComment:
-  Enabled: false
-
-Style/GuardClause:
-  Enabled: false
 
 Style/NumericLiterals:
   Exclude:
