@@ -10,7 +10,6 @@
 #  updated_at :datetime         not null
 #
 
-
 class Habit < ApplicationRecord
   has_many :commits, dependent: :destroy
 end

@@ -20,7 +20,6 @@
 #  fk_rails_...  (habit_id => habits.id)
 #
 
-
 class Commit < ApplicationRecord
   belongs_to :habit
 end

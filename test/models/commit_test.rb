@@ -20,7 +20,6 @@
 #  fk_rails_...  (habit_id => habits.id)
 #
 
-
 require 'test_helper'
 
 class CommitTest < ActiveSupport::TestCase
