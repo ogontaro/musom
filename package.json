@@ -2,7 +2,7 @@
   "name": "musom",
   "private": true,
   "scripts": {
-    "test": "eslint app/frontend/**/* --fix"
+    "lint": "eslint app/frontend/**/* --fix"
   },
   "dependencies": {
     "@rails/webpacker": "3.5",
