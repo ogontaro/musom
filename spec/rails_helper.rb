@@ -54,4 +54,14 @@ RSpec.configure do |config|
   config.filter_rails_from_backtrace!
   # arbitrary gems may also be filtered via:
   # config.filter_gems_from_backtrace("gem name")
+
+  # rspec settings
+  g.test_framework :rspec,
+                   fixtures: true,
+                   view_specs: false,
+                   helper_specs: false,
+                   routing_specs: false,
+                   controller_specs: true,
+                   request_specs: false
+  g.fixture_replacement :factory_bot, dir: 'spec/factories'
 end
