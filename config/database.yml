@@ -9,7 +9,7 @@ default: &default
 
 development:
   <<: *default
-  database: musom_developmentd
+  database: musom_development
 
 test:
   <<: *default
