@@ -11,8 +11,9 @@ gem 'jbuilder', '~> 2.5'
 gem 'pg', '>= 0.18', '< 2.0'
 gem 'puma', '~> 3.11'
 gem 'rails', '~> 5.2.0'
-gem 'webpacker', '~> 3.5'
+gem 'slim'
 gem 'sorcery'
+gem 'webpacker', '~> 3.5'
 
 group :development, :test do
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
