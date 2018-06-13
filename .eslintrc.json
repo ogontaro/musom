@@ -1,7 +1,10 @@
 {
   "env": {
-    "es6": true
+    "es6": true,
+    "browser": true,
+    "jquery": true // if use $
   },
+  "parser": "babel-eslint", // for async/await
   "extends": [
     "airbnb-base",
     "plugin:vue/recommended"
