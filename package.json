@@ -2,7 +2,9 @@
   "name": "musom",
   "private": true,
   "scripts": {
-    "lint": "eslint app/frontend/**/* --fix"
+    "lint": "yarn run lint:javascript && yarn run lint:stylesheet",
+    "lint:javascript": "eslint app/frontend/javascripts/**/* --fix",
+    "lint:stylesheet": "stylelint app/frontend/stylesheets/**/*.scss --fix"
   },
   "dependencies": {
     "@rails/webpacker": "3.5",
@@ -19,6 +21,9 @@
     "eslint-loader": "^2.0.0",
     "eslint-plugin-import": "^2.12.0",
     "eslint-plugin-vue": "^4.5.0",
+    "stylelint": "^9.2.1",
+    "stylelint-config-standard": "^18.2.0",
+    "stylelint-scss": "^3.1.0",
     "webpack-dev-server": "2.11.2"
   }
 }
