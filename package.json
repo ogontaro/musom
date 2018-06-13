@@ -3,8 +3,8 @@
   "private": true,
   "scripts": {
     "lint": "yarn run lint:javascript && yarn run lint:stylesheet",
-    "lint:javascript": "eslint app/frontend/javascripts/**/* --fix",
-    "lint:stylesheet": "stylelint app/frontend/stylesheets/**/*.scss --fix"
+    "lint:javascript": "eslint --fix app/frontend/javascripts/**/*",
+    "lint:stylesheet": "stylelint --fix app/frontend/stylesheets/**/*.scss"
   },
   "dependencies": {
     "@rails/webpacker": "3.5",
