@@ -14,11 +14,11 @@ jobs:
 
       - restore_cache:
           key: cache-bundle-{{ checksum "Gemfile.lock" }}
-      - run: bundle install --path vendor/bundle
+      - run: bundle install --path .bundle
       - save_cache:
           key: cache-bundle-{{ checksum "Gemfile.lock" }}
           paths:
-            - vendor/bundle
+            - .bundle
 
       - restore_cache:
           key: cache-yarn-{{ checksum "yarn.lock" }}
