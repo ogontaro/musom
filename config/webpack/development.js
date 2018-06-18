@@ -4,7 +4,7 @@ const environment = require('./environment')
 
 module.exports = environment.toWebpackConfig()
 
-environment.loaders.set('eslint', {
+environment.loaders.append('eslint', {
   test: /\.(js|vue)$/,
   loader: 'eslint-loader',
   enforce: 'pre',
