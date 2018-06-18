@@ -4,7 +4,8 @@
   "scripts": {
     "lint": "yarn run lint:javascript && yarn run lint:stylesheet",
     "lint:javascript": "eslint --fix app/frontend/javascript/**/*",
-    "lint:stylesheet": "stylelint --fix app/**/*.scss"  },
+    "lint:stylesheet": "stylelint --fix app/**/*.scss"
+  },
   "dependencies": {
     "@rails/webpacker": "3.5",
     "bulma": "^0.7.1",
