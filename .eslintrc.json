@@ -7,7 +7,12 @@
   "plugins": [
     "import"
   ],
-  "parser": "babel-eslint", // for async/await
+  "parser": "vue-eslint-parser",
+  "parserOptions": {
+    "parser": "babel-eslint",
+    "sourceType": "module",
+    "allowImportExportEverywhere": false
+  },
   "extends": [
     "airbnb-base",
     "plugin:vue/recommended"
