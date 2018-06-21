@@ -1,3 +1,9 @@
-nav.navbar role="navigation" aria-label="main navigation"
-  .navbar-brand
-    = link_to 'Musom', root_path, class: 'navbar-item'
+nav.navbar
+  h1.navbar-brand
+    = link_to root_path, class: 'navbar-item'
+      = image_tag asset_pack_path('images/logo.png'), alt: 'musom'
+
+  nav.navbar-end
+    span.navbar-item
+      = link_to '#', class: 'button is_white is-outlined'
+        span ログイン
