@@ -11,12 +11,12 @@ RUN apk upgrade --no-cache && \
     apk add --update --no-cache \
       postgresql-client \
       yarn \
+      git \
       tzdata && \
     cp /usr/share/zoneinfo/Asia/Tokyo /etc/localtime && \
     apk add --update --no-cache --virtual build-dependencies \
       build-base \
       curl-dev \
-      git \
       linux-headers \
       libxml2-dev \
       libxslt-dev \
@@ -31,5 +31,6 @@ RUN apk upgrade --no-cache && \
 COPY ./ ./
 EXPOSE 3000
 
+RUN npm rebuild node-sass
 RUN SECRET_KEY_BASE=sljflkasjklfjklajwklsjlfkasjl RAILS_ENV=production bundle exec rails assets:precompile
 CMD SECRET_KEY_BASE=sljflkasjklfjklajwklsjlfkasjl RAILS_ENV=production bundle exec rails s -p 3000 -b '0.0.0.0'
