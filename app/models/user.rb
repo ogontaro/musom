@@ -1,12 +1,14 @@
-# frozen_string_literal: true
-
 # == Schema Information
 #
 # Table name: users
 #
-#  id         :bigint(8)        not null, primary key
-#  created_at :datetime         not null
-#  updated_at :datetime         not null
+#  id               :integer          not null, primary key
+#  crypted_password :string           default(""), not null
+#  email            :string           not null
+#  salt             :string           default(""), not null
+#  username         :string           not null
+#  created_at       :datetime         not null
+#  updated_at       :datetime         not null
 #
 
 class User < ApplicationRecord
