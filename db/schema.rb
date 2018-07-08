@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_07_02_134259) do
+ActiveRecord::Schema.define(version: 2018_07_08_104628) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -30,13 +30,37 @@ ActiveRecord::Schema.define(version: 2018_07_02_134259) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "users", id: :serial, force: :cascade do |t|
-    t.string "username", null: false
+  create_table "user_providers", force: :cascade do |t|
+    t.integer "user_id", null: false
+    t.string "provider", null: false
+    t.string "uid", null: false
+  end
+
+  create_table "users", force: :cascade do |t|
     t.string "email", null: false
-    t.string "crypted_password", default: "", null: false
-    t.string "salt", default: "", null: false
+    t.string "crypted_password"
+    t.string "salt"
+    t.string "activation_state"
+    t.string "activation_code"
+    t.datetime "activation_code_expires_at"
+    t.string "remember_me_token"
+    t.datetime "remember_me_token_expires_at"
+    t.string "reset_password_token"
+    t.datetime "reset_password_token_expires_at"
+    t.datetime "reset_password_email_sent_at"
+    t.datetime "last_login_at"
+    t.datetime "last_logout_at"
+    t.datetime "last_activity_at"
+    t.integer "failed_logins_count", default: 0
+    t.datetime "lock_expires_at"
+    t.string "type"
+    t.string "last_login_from_ip_address"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["activation_code"], name: "index_users_on_activation_code"
+    t.index ["email"], name: "index_users_on_email"
+    t.index ["last_logout_at", "last_activity_at"], name: "index_users_on_last_logout_at_and_last_activity_at"
+    t.index ["remember_me_token"], name: "index_users_on_remember_me_token"
   end
 
   add_foreign_key "commits", "habits"
