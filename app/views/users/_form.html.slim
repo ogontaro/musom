@@ -1,3 +1,10 @@
-= form_for(form, url: signup_path, method: :post) do |f|
-  | ユーザ名
-  | パスワード
+= form_for @user do |f|
+  .field
+    = f.label :email
+    = f.text_field :email
+
+  .field
+    = f.label :password
+    = f.password_field :password
+
+  = f.submit
