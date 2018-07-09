@@ -10,7 +10,6 @@
 #  user_id  :integer          not null
 #
 
-
 class UserProvider < ApplicationRecord
   belongs_to :user
 end
