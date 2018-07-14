@@ -14,6 +14,10 @@ class UsersController < ApplicationController
     end
   end
 
+  def activate
+
+  end
+
   private
 
   def user_params
