@@ -41,5 +41,5 @@ class User < ApplicationRecord
   accepts_nested_attributes_for :providers
 
   validates :password, length: { minimum: 3 }, if: -> { new_record? || changes[:crypted_password] }
-  validates :email, uniqueness: true
+  validates :email, presence: true, uniqueness: { case_sensitive: false }, email: true
 end
