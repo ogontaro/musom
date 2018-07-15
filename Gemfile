@@ -24,7 +24,8 @@ end
 
 group :development do
   gem 'annotate'
-  gem 'letter_opener_web'
+  # https://github.com/fgrehm/letter_opener_web/issues/46
+  gem 'letter_opener_web', github: 'fgrehm/letter_opener_web', ref: 'd6c6455'
   gem 'listen', '>= 3.0.5', '< 3.2'
   gem 'rubocop'
   gem 'spring'
