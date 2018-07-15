@@ -40,6 +40,13 @@ class User < ApplicationRecord
   has_many :providers, class_name: 'UserProvider', dependent: :destroy
   accepts_nested_attributes_for :providers
 
-  validates :password, length: { minimum: 3 }, if: -> { new_record? || changes[:crypted_password] }
+  validates :password, length: { minimum: 3 }, on: :update
   validates :email, presence: true, uniqueness: { case_sensitive: false }, email: true
+
+  before_create :setup_activation
+  after_create :send_activation_needed_email!
+
+  def external?
+    false
+  end
 end
