@@ -11,7 +11,7 @@ class ActivationsController < ApplicationController
 
   def create
     @token = params[:user][:token]
-    if @user = User.load_from_activation_token(@token)
+    if (@user = User.load_from_activation_token(@token))
       if @user.update(params[:user])
         @user.activate!
         auto_login @user
