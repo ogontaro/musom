@@ -94,6 +94,8 @@ GEM
     dotenv-rails (2.5.0)
       dotenv (= 2.5.0)
       railties (>= 3.2, < 6.0)
+    email_validator (1.6.0)
+      activemodel
     erubi (1.7.1)
     factory_bot (4.10.0)
       activesupport (>= 3.0.0)
@@ -269,6 +271,7 @@ DEPENDENCIES
   capybara (>= 2.15, < 4.0)
   chromedriver-helper
   dotenv-rails
+  email_validator
   factory_bot_rails
   faker!
   jb
